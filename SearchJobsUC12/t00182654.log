@@ -1,0 +1,233 @@
+commit 20a5586d86b5cf904ef12bf4fcb8bd51c88e5e01
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Thu Dec 8 12:07:59 2016 +0000
+
+    Split Declarations:
+    
+    file: FindJobTester
+    Split my variable declarations custSpec in FindJobTester.
+    Added More data in initializeInventory method.
+    
+    file: EmployType
+    Clean up the code.
+
+commit 929bfcfa1455b4a81d73be46d876fc9c4aa9040b
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Wed Nov 30 12:20:00 2016 +0000
+
+    Code Analysis:
+    
+    Immutability of fields:
+    file: Job
+    Added final for all private in Job class.
+    
+    file: JobSpec
+    Added final for all private.
+
+commit 1d44c7d5d27396e328f6a50b6115724af8430df2
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Wed Nov 30 12:13:30 2016 +0000
+
+    Run the code FindJobTester
+    
+    Looking Job only looking location in kerry
+    Delete comment at the top of the page.
+
+commit 086b1a85afa29b5ee82e9db7e771f4462359fc54
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Wed Nov 30 11:50:00 2016 +0000
+
+    Added Task file and
+    
+    Added principles from blackboard
+    Added UC12Task for Use case.
+
+commit c6082d7f967586fb8b4613dd3e418cdd05c86658
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Wed Nov 30 11:40:23 2016 +0000
+
+    Refactoring:
+    
+    file: FindCategoryTester
+    Rename FindCategoryTester to FindJobTester.
+    Rename matchingCategorys to matchingJobs
+
+commit 29462925118873e4806ab9584df46f4497faaf57
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Tue Nov 29 20:21:00 2016 +0000
+
+    Tidying up the code
+    
+    Delete CategoryJob class
+    Delete CategoryJobSpec class
+    
+    Changes in FindCategoryTester:
+    Added Map properties > HashMap
+    Specify an job employType and location, not category
+    Tidy up code in List matchingCategorys for the search
+    New version of initializeInventory method to search on more than just one job, or location.
+    Add several jobs, location, employType to inventory
+    
+    Inventory:
+    In list search method:
+    renamed CategoryJobSpec to JobSpec
+    renamed matchingCategorys to matchingJobs;
+    renamed CategoryJob to Job
+    
+    JobSpec
+    Deleted abstract
+    New version of JobSpec > adding private Map properties.
+    Added getProperty
+    Added getProperties
+    Added boolean matches JobSpec method.
+
+commit 02a03a9a7032e406ad1c7101d14fe51eaa30cd9d
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Tue Nov 29 19:16:07 2016 +0000
+
+    file: FindCategoryTester
+    
+    Renamed JobSpec to CategoryJobSpec
+    Renamed matchingJobs to matchingCategorys
+    Renamed getJobSpec to getSpec
+    
+    In JobSpec abstract public class
+
+commit a915c74ec23443cab70eb417a69ebcfce8a649b8
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Sun Nov 27 21:00:08 2016 +0000
+
+    Changes in inventory class
+    
+    Renamed JobSpec to CategoryJobSpec
+    Renamed matchingJobs to matchingCategorys
+    Renamed Job to CategoryJob
+    Renamed job to categoryJob
+    Added new if statement matches searchSpec
+    
+    Job:
+    Rename getJobSpec to getSpec
+    
+    JobSpec:
+    Delete by mistake.
+
+commit cf029fdf4e4d4ed03501ce733d7b2808eb0c197a
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Sun Nov 27 20:40:47 2016 +0000
+
+    Preparatory work for new superclasses
+    
+    New classes:
+    CategoryJob
+    CategoryJobSpec
+    
+    Changes:
+    CategoryJob to extend Job
+    CategoryJobSpec to extend JobSpec
+    
+    Inventory:
+    Refactor (Rename) jobs to inventory
+
+commit 4332c2db289652e0e966e584ebc48e3e9822f5c3
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Sun Nov 27 19:50:39 2016 +0000
+
+    Added new jobs in intializeInventory
+    
+    Mix the few changes in initializeInventory.
+
+commit dac536a6a6f02d4e5e597b7346a159a2ff8dc66e
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Thu Nov 24 23:01:17 2016 +0000
+
+    Coupling issue with JobSpec -- Job
+    
+    Moved JobSpec construction out of Job
+    Changed Job instantions in FindCategoryTester
+    Replaced JobSpec fields in Job Constructor with JobSpec reference
+    
+    --Forgot put it this in commit message for --67e0843--
+
+commit 77eaa62b8fb1a899704ddf370bb943457eff75d2
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Thu Nov 24 22:50:04 2016 +0000
+
+    DIY problem with Inventory search method:
+    
+    Extracted matches method from Inventory search and moved it to JobSpec
+
+commit 67e0843a3d1d7ec690d443f88a906c64234a8c2e
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Thu Nov 24 22:48:23 2016 +0000
+
+    Encapsulation problem with Guitar definition
+    
+    Extracted JobSpec from Job
+    Category, Location, EmployType and associated accessors migrated to JobSpec class.
+    
+    Type migration for whatUserWant (Job -> JobSpec)
+    JobSpec object is instantiated in Job constructor
+
+commit 94425426afdf041030b36a9d5fa18443238fa3f4
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Thu Nov 24 22:14:53 2016 +0000
+
+    Value Safety Issues in Job.java
+    
+    Replaced values in inventory
+    Changed instantiations in FindCategoryTester
+    In Job, type migrations for:
+    Category, Location and EmployType
+
+commit bd5a0aac8be3ba379bc09850b13c8f0864185dd0
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Wed Nov 23 21:03:01 2016 +0000
+
+    Added the code in Inventory class
+    
+    Added private List jobs
+    Added addJob method in Inventory
+    Added getJob method in Inventory
+    Added search job method in Inventory
+    
+    file: FindCategoryTester
+    Added main method
+    Added initializeInventory method
+    Added one value in initializeInventory method
+
+commit 5e82756c4463f624e7e3aa10c4cdc8b54780962c
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Wed Nov 23 13:07:19 2016 +0000
+
+    Added New code for Job
+    
+    In the Job class:
+    Added following fields: job_id, category, location, employType
+    Added getJob_id method
+    Added getCategory method
+    Added getLocation method
+    Added getEmployType method
+    Added setCategory method
+    Added setLocation method
+    Added setEmployType method
+
+commit 7149c5edb95f79a093b4fffb1482741cf21ca959
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Wed Nov 23 12:55:44 2016 +0000
+
+    Value Safety Issues in Guitar.java
+    
+    New enum classes: Category, EmployType, Location
+    Added the values in Category, EmployType and Location
+
+commit d0d57f3e64525037adfe95deb2d750188fd7a3ba
+Author: Donal Maher <dpjm94@live.ie>
+Date:   Wed Nov 23 12:47:33 2016 +0000
+
+    Initial Commit
+    
+    Added Job class
+    Added Inventory class
+    Added FindCategoryTester class
+    Added Directory file name test
+    Created the test for job named JobTest
